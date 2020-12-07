@@ -1,0 +1,38 @@
+@page "/factures"
+@using Facturation.Shared
+@inject IBusinessData Data
+
+<h1>Factures</h1>
+
+@if (Data.Factures == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Client</th>
+                <th>Date d'emission</th>
+                <th>Date d'echeance</th>
+                <th>Montant du</th>
+                <th>Montant regle</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var facture in Data.Factures)
+            {
+                <tr>
+                    <td>@facture.Numero</td>
+                    <td>@facture.Client</td>
+                    <td>@facture.DateEmission.Date</td>
+                    <td>@facture.DateEcheance.Date</td>
+                    <td>@facture.MontantDu</td>
+                    <td>@facture.MontantRegle</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

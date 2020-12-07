@@ -1,0 +1,33 @@
+﻿@page "/ca"
+@using Facturation.Shared
+@inject IBusinessData Data
+
+<h1>Chiffre d'Affaires</h1>
+
+@if (Data.Factures == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Mois</th>
+                <th>CA facture</th>
+                <th>CA reel</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var aggregate in Data.Aggregats)
+        {
+            <tr>
+                <td>@aggregate.Mois</td>
+                <td>@aggregate.CaFacture</td>
+                <td>@aggregate.CaReel</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+

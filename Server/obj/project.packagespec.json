@@ -1,0 +1,62 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Server/Facturation.Server.csproj",
+    "projectName": "Facturation.Server",
+    "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Server/Facturation.Server.csproj",
+    "outputPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Server/obj/",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "net50"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp5.0": {
+        "projectReferences": {
+          "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Client/Facturation.Client.csproj": {
+            "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Client/Facturation.Client.csproj"
+          },
+          "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Shared/Facturation.Shared.csproj": {
+            "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Shared/Facturation.Shared.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp5.0": {
+      "dependencies": {
+        "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+          "target": "Package",
+          "version": "[5.0.0, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+    }
+  }
+}
