@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u2blKH2NsVfrA4ysBF31UZQkH7tdaBn1b8s8kqC7w8sxb2vui2+VLPyBzkSIFE1GPWtp7zLqC0flU/KIldRpXg==",
+  "dgSpecHash": "XZYt/UzMhqDKrSfbKAuQkSXrgE6C2FHdNODFe1byZIl5HvR4p9LjHAp0C9NSyAZiBSr3xoJaVx5Ne8bmVjEYRQ==",
   "success": true,
   "projectFilePath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Client/Facturation.Client.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "/home/camille/.nuget/packages/microsoft.jsinterop.webassembly/5.0.0/microsoft.jsinterop.webassembly.5.0.0.nupkg.sha512",
     "/home/camille/.nuget/packages/system.io.pipelines/5.0.0/system.io.pipelines.5.0.0.nupkg.sha512",
     "/home/camille/.nuget/packages/system.net.http.json/5.0.0/system.net.http.json.5.0.0.nupkg.sha512",
-    "/home/camille/.nuget/packages/microsoft.netcore.app.runtime.browser-wasm/5.0.0/microsoft.netcore.app.runtime.browser-wasm.5.0.0.nupkg.sha512"
+    "/home/camille/.nuget/packages/microsoft.netcore.app.runtime.browser-wasm/5.0.1/microsoft.netcore.app.runtime.browser-wasm.5.0.1.nupkg.sha512"
   ],
   "logs": []
 }
