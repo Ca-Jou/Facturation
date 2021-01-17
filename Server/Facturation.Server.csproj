@@ -13,9 +13,5 @@
     <ProjectReference Include="..\Shared\Facturation.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers" />
-  </ItemGroup>
-
 
 </Project>

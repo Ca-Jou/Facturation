@@ -1182,11 +1182,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Client/Facturation.Client.csproj",
+      "projectUniqueName": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Facturation.Client.csproj",
       "projectName": "Facturation.Client",
-      "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Client/Facturation.Client.csproj",
+      "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Facturation.Client.csproj",
       "packagesPath": "/home/camille/.nuget/packages/",
-      "outputPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Client/obj/",
+      "outputPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/camille/.nuget/NuGet/NuGet.Config"
@@ -1201,8 +1201,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Shared/Facturation.Shared.csproj": {
-              "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier2/Facturation/Shared/Facturation.Shared.csproj"
+            "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/Facturation.Shared.csproj": {
+              "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/Facturation.Shared.csproj"
             }
           }
         }
@@ -1244,7 +1244,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
-            "version": "[5.0.1, 5.0.1]"
+            "version": "[5.0.2, 5.0.2]"
           }
         ],
         "frameworkReferences": {
@@ -1252,7 +1252,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

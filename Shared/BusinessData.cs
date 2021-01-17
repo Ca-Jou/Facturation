@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Facturation.Shared
 {
@@ -18,11 +19,11 @@ namespace Facturation.Shared
 
         public void Populate()
         {
-            Facture f1 = new Facture(001, "Jouan", new DateTime(2020, 11, 3), new DateTime(2020, 11, 24), 1200, 1200);
-            Facture f2 = new Facture(002, "Jato", new DateTime(2020, 11, 09), new DateTime(2020, 11, 30), 500, 0);
-            Facture f3 = new Facture(003, "Da Silva", new DateTime(2020, 11, 15), new DateTime(2020, 12, 06), 1000, 900);
-            Facture f4 = new Facture(004, "Jouan", new DateTime(2020, 12, 01), new DateTime(2020, 12, 22), 500, 0);
-            Facture f5 = new Facture(005, "Jato", new DateTime(2020, 12, 07), new DateTime(2020, 12, 28), 500, 0);
+            Facture f1 = new Facture(001, "Jouan", new DateTime(2020, 11, 3), 1200, 1200);
+            Facture f2 = new Facture(002, "Jato", new DateTime(2020, 11, 09), 500, 0);
+            Facture f3 = new Facture(003, "Da Silva", new DateTime(2020, 11, 15), 1000, 900);
+            Facture f4 = new Facture(004, "Jouan", new DateTime(2020, 12, 01), 500, 0);
+            Facture f5 = new Facture(005, "Jato", new DateTime(2020, 12, 07), 500, 0);
 
             this.listeFactures.Add(f1);
             this.listeFactures.Add(f2);
@@ -56,5 +57,8 @@ namespace Facturation.Shared
 
         public IEnumerable<Facture> Factures => listeFactures;
         public IEnumerable<Aggregate> Aggregats => facturesAgregees;
+
+        public float CAfacture => listeFactures.Sum(facture => facture.MontantDu);
+        public float TresoEnAttente => listeFactures.Sum(facture => facture.MontantDu - facture.MontantRegle);
     }
 }

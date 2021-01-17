@@ -1,12 +1,12 @@
 @page "/factures"
 @using Facturation.Shared
-@inject IBusinessData Data
+@inject HttpClient HttpClient
 
 <h1>Factures</h1>
 
-@if (Data.Factures == null)
+@if (allFactures == null)
 {
-    <p><em>Loading...</em></p>
+    <p><em>Interrogation du serveur...</em></p>
 }
 else
 {
@@ -22,9 +22,9 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var facture in Data.Factures)
+            @foreach (var facture in allFactures)
             {
-                <tr>
+                <tr class='table-@ColorerFacture(facture)'>
                     <td>@facture.Numero</td>
                     <td>@facture.Client</td>
                     <td>@facture.DateEmission.Date</td>
@@ -35,4 +35,31 @@ else
             }
         </tbody>
     </table>
+}
+
+@code {
+
+    static string ColorerFacture(Facture facture)
+    {
+        if (facture.estEnRetard())
+        {
+            return "danger";
+        }
+        else if (facture.estSoldee())
+        {
+            return "success";
+        }
+        else
+        {
+            return "default";
+        }
+    }
+
+    private IEnumerable<Facture> allFactures = null;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        allFactures = await HttpClient.GetFromJsonAsync<IEnumerable<Facture>>("api/factures");
+    }
+
 }
