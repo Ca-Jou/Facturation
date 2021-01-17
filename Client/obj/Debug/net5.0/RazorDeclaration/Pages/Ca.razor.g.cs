@@ -97,7 +97,22 @@ using Facturation.Shared;
         {
         }
         #pragma warning restore 1998
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IBusinessData Data { get; set; }
+#nullable restore
+#line 34 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Pages/Ca.razor"
+       
+
+    private IEnumerable<Aggregate> allAggregates = null;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        allAggregates = await HttpClient.GetFromJsonAsync<IEnumerable<Aggregate>>("api/aggregates");
+    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient HttpClient { get; set; }
     }
 }
 #pragma warning restore 1591

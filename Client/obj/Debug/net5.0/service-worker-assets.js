@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-5LJZH+xz62oPsqqHCzbsRdzxdhpBanL2c6X+go4vAw0=",
+      "hash": "sha256-ZICTfkCK5OdhiOxjzYykl3DtKLiVwxuPy7PK37FEhSo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -785,19 +785,19 @@
       "url": "_framework\/dotnet.5.0.2.js"
     },
     {
-      "hash": "sha256-adYCfFFbxALYM4xR7UzJFFofdXBuUmBg7PbfLkkjGJ0=",
+      "hash": "sha256-imCIw+Tz9bWchJjMV2Tn7\/aJa\/MHNgx8fFxzJSXPjeo=",
       "url": "_framework\/Facturation.Shared.dll"
     },
     {
-      "hash": "sha256-9yCigwWFACdO+JjYoHOr\/fQCTP6Bx2SppBf26dWrFRY=",
+      "hash": "sha256-zeKGy1r8wYL19DkkK6A+DiiCLZAuyCz3Sdrc6rtMnKU=",
       "url": "_framework\/Facturation.Shared.pdb"
     },
     {
-      "hash": "sha256-y9YL5ISeX+gdmMl793nHLfPOzj2PKQY7HhRCtbiKot0=",
+      "hash": "sha256-uLG2K0GteyyA9gifAJTsK0aroZg3vDTrSPejQiyvCeE=",
       "url": "_framework\/Facturation.Client.dll"
     },
     {
-      "hash": "sha256-Os7mzNchs5PdheCdp5bge2JbNB2XYsQde\/DTQD+jxhA=",
+      "hash": "sha256-qWUcpjK55MkPSZfK49UN1sHKP0PFRgzptTDbPN3xdqk=",
       "url": "_framework\/Facturation.Client.pdb"
     },
     {
@@ -1585,7 +1585,7 @@
       "url": "_framework\/dotnet.5.0.2.js.gz"
     },
     {
-      "hash": "sha256-td1fjYKRZ+6qnJb3QExRSDC2QCwshcJ3CbXNHrLMMd8=",
+      "hash": "sha256-j6i\/1dAQQVbrKOjNZi0pfGbdGwWGhJTKfVysajvJjyM=",
       "url": "_framework\/Facturation.Shared.dll.gz"
     },
     {
@@ -1661,5 +1661,5 @@
       "url": "Facturation.Client.bundle.scp.css"
     }
   ],
-  "version": "iFiGU8V2"
+  "version": "PjQ7LazU"
 };

@@ -1,10 +1,10 @@
 ﻿@page "/ca"
 @using Facturation.Shared
-@inject IBusinessData Data
+@inject HttpClient HttpClient
 
 <h1>Chiffre d'Affaires</h1>
 
-@if (Data.Factures == null)
+@if (allAggregates == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -19,7 +19,7 @@ else
             </tr>
         </thead>
         <tbody>
-        @foreach (var aggregate in Data.Aggregats)
+        @foreach (var aggregate in allAggregates)
         {
             <tr>
                 <td>@aggregate.Mois</td>
@@ -29,5 +29,16 @@ else
         }
         </tbody>
     </table>
+}
+
+@code {
+
+    private IEnumerable<Aggregate> allAggregates = null;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        allAggregates = await HttpClient.GetFromJsonAsync<IEnumerable<Aggregate>>("api/aggregates");
+    }
+
 }
 

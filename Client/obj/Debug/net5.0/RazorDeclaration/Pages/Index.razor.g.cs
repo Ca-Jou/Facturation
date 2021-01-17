@@ -90,6 +90,20 @@ using Facturation.Client.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 17 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Pages/Index.razor"
+       
+    private Dictionary<string, float> dataCA = null;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        dataCA = await HttpClient.GetFromJsonAsync<Dictionary<string, float>>("api/dashboard");
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient HttpClient { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -28,6 +28,10 @@ namespace Facturation.Shared
 
         public bool estEnRetard()
         {
+            if (this.estSoldee())
+            {
+                return false;
+            }
             return DateEcheance < DateTime.Now;
         }
 

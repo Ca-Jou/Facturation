@@ -103,13 +103,13 @@ using Facturation.Shared;
 
     static string ColorerFacture(Facture facture)
     {
-        if (facture.estEnRetard())
-        {
-            return "danger";
-        }
-        else if (facture.estSoldee())
+        if (facture.estSoldee())
         {
             return "success";
+        }
+        else if (facture.estEnRetard())
+        {
+            return "danger";
         }
         else
         {
