@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Facturation.Shared
 {
@@ -51,30 +52,36 @@ namespace Facturation.Shared
             MontantRegle += montant;
         }
         
+        [Required(ErrorMessage = "Le numero de facture est obligatoire.")]
         public int Numero
         {
             get => _numero;
             set => _numero = value;
         }
 
+        [Required(ErrorMessage = "Le nom du client est obligatoire.")]
         public string Client
         {
             get => _client;
             set => _client = value;
         }
 
+        [Required(ErrorMessage = "La date d'emission de la facture est obligatoire.")]
+        [DataType(DataType.DateTime)]
         public DateTime DateEmission
         {
             get => _dateEmission;
             set => _dateEmission = value;
         }
 
+        [DataType(DataType.DateTime)]
         public DateTime DateEcheance
         {
             get => _dateEcheance;
             set => _dateEcheance = value;
         }
 
+        [Required(ErrorMessage = "Le montant facture est obligatoire.")]
         public float MontantDu
         {
             get => _montantDu;
