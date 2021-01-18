@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-8pvWq3fCnnKWBz2nX8UqQiHAOCysSooCd3DWMhtJLOs=",
+      "hash": "sha256-UIIhdr2t66FIyebK\/vtCLMcJ1JsWXPWTDZKDZCMATts=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -793,11 +793,11 @@
       "url": "_framework\/Facturation.Shared.pdb"
     },
     {
-      "hash": "sha256-CSSZFcKsmtCBgEYHgzFLDpJXcmmKFm4sT8fx2LePFB8=",
+      "hash": "sha256-YzexrF77I2Uoy2+HmtUrXa497vdpKDnR7\/mQ1lm3xfc=",
       "url": "_framework\/Facturation.Client.dll"
     },
     {
-      "hash": "sha256-KXgtFOjeziBVp9TwBiwXEleWef8JA8VJM\/SnqLurfB0=",
+      "hash": "sha256-vpaqNwnmfEPhw5ZMR0k0J+C3yoFgWBh3eOCdiQ3OHJg=",
       "url": "_framework\/Facturation.Client.pdb"
     },
     {
@@ -1589,7 +1589,7 @@
       "url": "_framework\/Facturation.Shared.dll.gz"
     },
     {
-      "hash": "sha256-QUnDfaiDTVRWGvzoGR1+aCfO+yGagpMsQT0hHRivYhg=",
+      "hash": "sha256-uN3JPmt0PHERHQQn+Tlye8BkYKVR14rxGQmIOKzYK1s=",
       "url": "css\/app.css"
     },
     {
@@ -1661,5 +1661,5 @@
       "url": "Facturation.Client.bundle.scp.css"
     }
   ],
-  "version": "TLNZ9yNn"
+  "version": "18Go0n7a"
 };

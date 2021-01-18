@@ -91,7 +91,7 @@ using Facturation.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/Index.razor"
+#line 29 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/Index.razor"
        
     private Dictionary<string, float> dataCA = null;
     

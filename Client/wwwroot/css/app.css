@@ -30,9 +30,30 @@ a, .btn-link {
     color: red;
 }
 
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+}
+
+
 .form {
     display: flex;
     flex-direction: column;
+    width: 50vw;
+    margin-top: 10px;
+}
+
+.form input {
+    margin-bottom: 15px;
+}
+
+.form p {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.table {
+    width: 60vw;
 }
 
 #blazor-error-ui {

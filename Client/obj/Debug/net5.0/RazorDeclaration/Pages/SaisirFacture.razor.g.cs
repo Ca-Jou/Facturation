@@ -89,6 +89,20 @@ using System.Net.Http;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
+using System.Net;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
+using Microsoft.Extensions.Logging;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/SaisirFacture")]
     public partial class SaisirFacture : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,13 +112,37 @@ using System.Net.Http;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
+#line 34 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
        
+    private bool disabled;
+    private string message;
+    private string messageStyles;
     private Facture facture = new Facture() {DateEmission = DateTime.Today, DateEcheance = DateTime.Today.AddDays(30)};
     
     protected async void postFacture()
     {
-        await HttpClient.PostAsJsonAsync("api/factures", facture);
+        try
+        {
+            var response = await HttpClient.PostAsJsonAsync("api/factures", facture);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new HttpRequestException("Validation failed.");
+            }
+            else
+            {
+                disabled = true;
+                messageStyles = "color:green";
+                message = "Votre facture a bien ete enregistree.";
+            }
+        }
+        catch (Exception e)
+        {
+            messageStyles = "color:red";
+            message = $"Erreur d'enregistrement de la facture: {e.Message}";
+        }
+        
+        StateHasChanged();
     }
 
 #line default

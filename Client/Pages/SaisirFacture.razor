@@ -1,37 +1,65 @@
 @page "/SaisirFacture"
 @using Facturation.Shared
 @using System.Net.Http
+@using System.Net
+@using Microsoft.Extensions.Logging
 @inject HttpClient HttpClient
 
-<h3>Saisir une facture</h3>
+<h1>Saisir une facture</h1>
 
 <EditForm class="form" Model="@facture" OnValidSubmit="@postFacture">
     <ValidationSummary />
     <DataAnnotationsValidator />
     
     <label for="numero">Numero de facture :</label>
-    <InputNumber id="numero" @bind-Value="facture.Numero"></InputNumber>
+    <InputNumber id="numero" @bind-Value="facture.Numero" disabled="@disabled"></InputNumber>
     
     <label for="client">Nom de client :</label>
-    <InputText id="client" @bind-Value="facture.Client"></InputText>
+    <InputText id="client" @bind-Value="facture.Client" disabled="@disabled"></InputText>
     
     <label for="date-emission">Date d'emission :</label>
-    <InputDate id="date-emission" @bind-Value="facture.DateEmission"></InputDate>
+    <InputDate id="date-emission" @bind-Value="facture.DateEmission" disabled="@disabled"></InputDate>
     
     <label for="date-echeance">Date d'echeance :</label>
-    <InputDate id="date-echeance" @bind-Value="facture.DateEcheance"></InputDate>
+    <InputDate id="date-echeance" @bind-Value="facture.DateEcheance" disabled="@disabled"></InputDate>
     
     <label for="montant">Total HT :</label>
-    <InputNumber id="montant" @bind-Value="facture.MontantDu"></InputNumber>
+    <InputNumber id="montant" @bind-Value="facture.MontantDu" disabled="@disabled"></InputNumber>
 
-    <button type="submit">Enregistrer</button>
+    <button type="submit" disabled="@disabled">Enregistrer</button>
+    
+    <p style="@messageStyles">@message</p>
 </EditForm>
 
 @code {
+    private bool disabled;
+    private string message;
+    private string messageStyles;
     private Facture facture = new Facture() {DateEmission = DateTime.Today, DateEcheance = DateTime.Today.AddDays(30)};
     
     protected async void postFacture()
     {
-        await HttpClient.PostAsJsonAsync("api/factures", facture);
+        try
+        {
+            var response = await HttpClient.PostAsJsonAsync("api/factures", facture);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new HttpRequestException("Validation failed.");
+            }
+            else
+            {
+                disabled = true;
+                messageStyles = "color:green";
+                message = "Votre facture a bien ete enregistree.";
+            }
+        }
+        catch (Exception e)
+        {
+            messageStyles = "color:red";
+            message = $"Erreur d'enregistrement de la facture: {e.Message}";
+        }
+        
+        StateHasChanged();
     }
 }

@@ -9,9 +9,21 @@
 }
 else
 {
-    <h2>CA Facturé : <strong>@dataCA["CAfacture"].ToString("€ 0.00")</strong></h2>
-
-    <h2>Trésorerie en attente : <strong>@dataCA["TresoEnAttente"].ToString("€ 0.00")</strong></h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>CA Facturé</th>
+            <th>Trésorerie en attente</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>@dataCA["CAfacture"].ToString("€ 0.00")</td>
+            <td>@dataCA["TresoEnAttente"].ToString("€ 0.00")</td>
+        </tr>
+        
+        </tbody>
+    </table>
 }
 
 @code {
