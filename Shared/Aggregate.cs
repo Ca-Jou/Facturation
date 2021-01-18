@@ -7,7 +7,7 @@ namespace Facturation.Shared
         private int _mois;
         private decimal _caFacture;
         private decimal _caReel;
-
+        
         public Aggregate()
         {
             this.Mois = 0;
@@ -20,6 +20,8 @@ namespace Facturation.Shared
             this.CaFacture = caFacture;
             this.CaReel = caReel;
         }
+        
+        public int? Id { get; set; }
 
         public int Mois
         {

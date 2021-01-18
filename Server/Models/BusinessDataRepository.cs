@@ -24,7 +24,8 @@ namespace Facturation.Server.Models
             db.Query<Facture>("SELECT * FROM factures");
         
         //TODO requete SQL
-        public IEnumerable<Aggregate> Aggregats { get; }
+        public IEnumerable<Aggregate> Aggregats =>
+            db.Query<Aggregate>("SELECT MONTH(DateEcheance) as Mois, SUM(MontantDu) as CaFacture, SUM(MontantRegle) as CaReel FROM factures GROUP BY Mois ORDER BY Mois ASC");
 
         public decimal CAfacture =>
             db.QuerySingle<decimal>("SELECT SUM(MontantDu) FROM factures");
