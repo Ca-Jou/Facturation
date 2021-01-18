@@ -9,5 +9,7 @@ namespace Facturation.Shared
         
         decimal CAfacture { get; }
         decimal TresoEnAttente { get; }
+
+        public void AddFacture(Facture facture);
     }
 }

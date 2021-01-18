@@ -23,7 +23,6 @@ namespace Facturation.Server.Models
         public IEnumerable<Facture> Factures =>
             db.Query<Facture>("SELECT * FROM factures");
         
-        //TODO requete SQL
         public IEnumerable<Aggregate> Aggregats =>
             db.Query<Aggregate>("SELECT MONTH(DateEcheance) as Mois, SUM(MontantDu) as CaFacture, SUM(MontantRegle) as CaReel FROM factures GROUP BY Mois ORDER BY Mois ASC");
 
@@ -32,5 +31,12 @@ namespace Facturation.Server.Models
         public decimal TresoEnAttente =>
             db.QuerySingle<decimal>("SELECT SUM(MontantDu) - SUM(MontantRegle) FROM factures");
 
+        public void AddFacture(Facture facture)
+        {
+            var sql =
+                "INSERT INTO factures (Numero, Client, DateEmission, DateEcheance, MontantDu, MontantRegle) VALUES (@Numero, @Client, @DateEmission, @DateEcheance, @MontantDu, @MontantRegle);" +
+                "SELECT LAST_INSERT_ID() FROM factures";
+            var returnId = db.ExecuteScalar<int>(sql, facture);
+        }
     }
 }

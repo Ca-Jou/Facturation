@@ -1,0 +1,37 @@
+@page "/SaisirFacture"
+@using Facturation.Shared
+@using System.Net.Http
+@inject HttpClient HttpClient
+
+<h3>Saisir une facture</h3>
+
+<EditForm class="form" Model="@facture" OnValidSubmit="@postFacture">
+    <ValidationSummary />
+    <DataAnnotationsValidator />
+    
+    <label for="numero">Numero de facture :</label>
+    <InputNumber id="numero" @bind-Value="facture.Numero"></InputNumber>
+    
+    <label for="client">Nom de client :</label>
+    <InputText id="client" @bind-Value="facture.Client"></InputText>
+    
+    <label for="date-emission">Date d'emission :</label>
+    <InputDate id="date-emission" @bind-Value="facture.DateEmission"></InputDate>
+    
+    <label for="date-echeance">Date d'echeance :</label>
+    <InputDate id="date-echeance" @bind-Value="facture.DateEcheance"></InputDate>
+    
+    <label for="montant">Total HT :</label>
+    <InputNumber id="montant" @bind-Value="facture.MontantDu"></InputNumber>
+
+    <button type="submit">Enregistrer</button>
+</EditForm>
+
+@code {
+    private Facture facture = new Facture() {DateEmission = DateTime.Today, DateEcheance = DateTime.Today.AddDays(30)};
+    
+    protected async void postFacture()
+    {
+        await HttpClient.PostAsJsonAsync("api/factures", facture);
+    }
+}

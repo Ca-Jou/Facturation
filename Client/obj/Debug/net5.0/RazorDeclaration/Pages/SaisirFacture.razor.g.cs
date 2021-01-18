@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Facturation.Client.Shared
+namespace Facturation.Client.Pages
 {
     #line hidden
     using System;
@@ -12,13 +12,6 @@ namespace Facturation.Client.Shared
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
-#nullable restore
-#line 1 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
-using System.Net.Http;
-
-#line default
-#line hidden
-#nullable disable
 #nullable restore
 #line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using System.Net.Http.Json;
@@ -82,7 +75,22 @@ using Facturation.Client.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
+using Facturation.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
+using System.Net.Http;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/SaisirFacture")]
+    public partial class SaisirFacture : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,20 +98,19 @@ using Facturation.Client.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Shared/NavMenu.razor"
+#line 30 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
        
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    private Facture facture = new Facture() {DateEmission = DateTime.Today, DateEcheance = DateTime.Today.AddDays(30)};
+    
+    protected async void postFacture()
     {
-        collapseNavMenu = !collapseNavMenu;
+        await HttpClient.PostAsJsonAsync("api/factures", facture);
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient HttpClient { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -45,8 +45,8 @@ namespace Facturation.Server.Controllers
         {
             if (ModelState.IsValid)
             {
-                // TODO Enregistrer la nouvelle facture
-                return Created($"factures/{newFacture.Numero}", newFacture);
+                _data.AddFacture(newFacture);
+                return Created("/factures", newFacture);
             }
             else
             {
