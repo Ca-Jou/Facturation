@@ -12,6 +12,11 @@ namespace Facturation.Shared
         private decimal _montantDu;
         private decimal _montantRegle;
 
+        public Facture()
+        {
+            
+        }
+        
         public Facture(int numero, string client, DateTime dateEmission, decimal montantDu, decimal montantRegle)
         {
             this.Numero = numero;
