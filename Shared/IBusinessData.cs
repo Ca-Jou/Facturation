@@ -7,7 +7,7 @@ namespace Facturation.Shared
         IEnumerable<Facture> Factures { get; }
         public IEnumerable<Aggregate> Aggregats { get; }
         
-        float CAfacture { get; }
-        float TresoEnAttente { get; }
+        decimal CAfacture { get; }
+        decimal TresoEnAttente { get; }
     }
 }

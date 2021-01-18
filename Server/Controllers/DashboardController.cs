@@ -22,9 +22,9 @@ namespace Facturation.Server.Controllers
         }
         
         [HttpGet]
-        public Dictionary<string, float> Get()
+        public Dictionary<string, decimal> Get()
         {
-            Dictionary<string, float> dataCA = new Dictionary<string, float>();
+            Dictionary<string, decimal> dataCA = new Dictionary<string, decimal>();
             dataCA.Add("CAfacture", _data.CAfacture);
             dataCA.Add("TresoEnAttente", _data.TresoEnAttente);
             return dataCA;

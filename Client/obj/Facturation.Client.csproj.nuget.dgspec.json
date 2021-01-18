@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Facturation.Client.csproj": {}
+    "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Facturation.Client.csproj": {}
   },
   "projects": {
-    "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Facturation.Client.csproj": {
+    "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Facturation.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Facturation.Client.csproj",
+        "projectUniqueName": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Facturation.Client.csproj",
         "projectName": "Facturation.Client",
-        "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Facturation.Client.csproj",
+        "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Facturation.Client.csproj",
         "packagesPath": "/home/camille/.nuget/packages/",
-        "outputPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/obj/",
+        "outputPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/camille/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/Facturation.Shared.csproj": {
-                "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/Facturation.Shared.csproj"
+              "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/Facturation.Shared.csproj": {
+                "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/Facturation.Shared.csproj"
               }
             }
           }
@@ -86,14 +86,14 @@
         }
       }
     },
-    "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/Facturation.Shared.csproj": {
+    "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/Facturation.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/Facturation.Shared.csproj",
+        "projectUniqueName": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/Facturation.Shared.csproj",
         "projectName": "Facturation.Shared",
-        "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/Facturation.Shared.csproj",
+        "projectPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/Facturation.Shared.csproj",
         "packagesPath": "/home/camille/.nuget/packages/",
-        "outputPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/obj/",
+        "outputPath": "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/camille/.nuget/NuGet/NuGet.Config"

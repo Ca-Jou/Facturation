@@ -22,3 +22,15 @@
 /home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.dll
 /home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/obj/Debug/net5.0/ref/Facturation.Shared.dll
 /home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.pdb
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/bin/Debug/net5.0/Facturation.Shared.deps.json
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/bin/Debug/net5.0/Facturation.Shared.dll
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/bin/Debug/net5.0/ref/Facturation.Shared.dll
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/bin/Debug/net5.0/Facturation.Shared.pdb
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.csprojAssemblyReference.cache
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.AssemblyInfoInputs.cache
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.AssemblyInfo.cs
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.csproj.CoreCompileInputs.cache
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.dll
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/Debug/net5.0/ref/Facturation.Shared.dll
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Shared/obj/Debug/net5.0/Facturation.Shared.pdb

@@ -13,77 +13,77 @@ namespace Facturation.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 1 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 3 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 4 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 5 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 6 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 7 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 8 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 9 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using Facturation.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/_Imports.razor"
+#line 10 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using Facturation.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Pages/Ca.razor"
+#line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/Ca.razor"
 using Facturation.Shared;
 
 #line default
@@ -98,7 +98,7 @@ using Facturation.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Atelier3/Facturation/Client/Pages/Ca.razor"
+#line 34 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/Ca.razor"
        
 
     private IEnumerable<Aggregate> allAggregates = null;

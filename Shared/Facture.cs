@@ -9,10 +9,10 @@ namespace Facturation.Shared
         private string _client;
         private DateTime _dateEmission;
         private DateTime _dateEcheance;
-        private float _montantDu;
-        private float _montantRegle;
+        private decimal _montantDu;
+        private decimal _montantRegle;
 
-        public Facture(int numero, string client, DateTime dateEmission, float montantDu, float montantRegle)
+        public Facture(int numero, string client, DateTime dateEmission, decimal montantDu, decimal montantRegle)
         {
             this.Numero = numero;
             this.Client = client;
@@ -36,7 +36,7 @@ namespace Facturation.Shared
             return DateEcheance < DateTime.Now;
         }
 
-        public void enregistrerPaiement(DateTime datePaiement, float montant)
+        public void enregistrerPaiement(DateTime datePaiement, decimal montant)
         {
             if (datePaiement < DateEmission)
             {
@@ -51,6 +51,9 @@ namespace Facturation.Shared
 
             MontantRegle += montant;
         }
+        
+        
+        public int? Id { get; set; }
         
         [Required(ErrorMessage = "Le numero de facture est obligatoire.")]
         public int Numero
@@ -82,13 +85,13 @@ namespace Facturation.Shared
         }
 
         [Required(ErrorMessage = "Le montant facture est obligatoire.")]
-        public float MontantDu
+        public decimal MontantDu
         {
             get => _montantDu;
             set => _montantDu = value;
         }
 
-        public float MontantRegle
+        public decimal MontantRegle
         {
             get => _montantRegle;
             set => _montantRegle = value;

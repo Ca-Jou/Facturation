@@ -5,8 +5,8 @@ namespace Facturation.Shared
     public class Aggregate
     {
         private int _mois;
-        private float _caFacture;
-        private float _caReel;
+        private decimal _caFacture;
+        private decimal _caReel;
 
         public Aggregate()
         {
@@ -14,7 +14,7 @@ namespace Facturation.Shared
             this.CaFacture = 0;
             this.CaReel = 0;
         }
-        public Aggregate(int mois, float caFacture, float caReel)
+        public Aggregate(int mois, decimal caFacture, decimal caReel)
         {
             this.Mois = mois;
             this.CaFacture = caFacture;
@@ -27,13 +27,13 @@ namespace Facturation.Shared
             set => _mois = value;
         }
 
-        public float CaFacture
+        public decimal CaFacture
         {
             get => _caFacture;
             set => _caFacture = value;
         }
 
-        public float CaReel
+        public decimal CaReel
         {
             get => _caReel;
             set => _caReel = value;
