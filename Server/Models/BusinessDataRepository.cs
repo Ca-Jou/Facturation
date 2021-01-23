@@ -38,5 +38,11 @@ namespace Facturation.Server.Models
                 "SELECT LAST_INSERT_ID() FROM factures";
             var returnId = db.ExecuteScalar<int>(sql, facture);
         }
+
+        public void UpdateFacture(Facture facture)
+        {
+            var sql = "UPDATE factures SET MontantRegle = @MontantRegle WHERE Id = @Id";
+            db.Execute(sql, facture);
+        }
     }
 }

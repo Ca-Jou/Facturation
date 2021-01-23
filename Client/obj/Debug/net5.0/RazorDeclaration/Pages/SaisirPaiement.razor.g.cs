@@ -83,14 +83,14 @@ using Facturation.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/Factures.razor"
+#line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirPaiement.razor"
 using Facturation.Shared;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/factures")]
-    public partial class Factures : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/SaisirPaiement/{numFacture}")]
+    public partial class SaisirPaiement : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,32 +98,56 @@ using Facturation.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/Factures.razor"
+#line 40 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirPaiement.razor"
        
-
-    static string ColorerFacture(Facture facture)
-    {
-        if (facture.estSoldee())
-        {
-            return "success";
-        }
-        else if (facture.estEnRetard())
-        {
-            return "danger";
-        }
-        else
-        {
-            return "default";
-        }
-    }
-
-    private IEnumerable<Facture> allFactures = null;
+    [Parameter]
+    public string numFacture { get; set; }
     
+    private Paiement paiement = new Paiement() {Date = DateTime.Today};
+    private Facture facture;
+    private decimal resteDu;
+    private bool disabled;
+    private string message;
+    private string messageStyles;
+
+
     protected override async Task OnInitializedAsync()
     {
-        allFactures = await HttpClient.GetFromJsonAsync<IEnumerable<Facture>>("api/factures");
+        facture = await HttpClient.GetFromJsonAsync<Facture>("api/factures/" + numFacture);
+        paiement.Facture = facture;
+        resteDu = facture.MontantDu - facture.MontantRegle;
     }
 
+    protected async void postPaiement()
+    {
+        try
+        {
+            var response = await HttpClient.PostAsJsonAsync("api/paiements", paiement);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new HttpRequestException("Validation failed.");
+            }
+            else
+            {
+                disabled = true;
+                messageStyles = "color:green";
+                message = "Le paiement a bien ete enregistree.";
+            }
+        }
+        catch (ArgumentOutOfRangeException e)
+        {
+            messageStyles = "color:red";
+            message = $"Erreur d'enregistrement du paiement: {e.Message}";
+        }
+        catch (Exception e)
+        {
+            messageStyles = "color:red";
+            message = $"Erreur d'enregistrement du paiement: {e.Message}";
+        }
+        
+        StateHasChanged();
+    }
 
 #line default
 #line hidden

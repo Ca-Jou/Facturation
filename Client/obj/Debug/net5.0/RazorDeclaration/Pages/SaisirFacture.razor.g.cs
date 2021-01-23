@@ -13,6 +13,13 @@ namespace Facturation.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
+#line 1 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
+using System.Net.Http;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/_Imports.razor"
 using System.Net.Http.Json;
 
@@ -82,27 +89,6 @@ using Facturation.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
-using System.Net.Http;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
-using System.Net;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 5 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
-using Microsoft.Extensions.Logging;
-
-#line default
-#line hidden
-#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/SaisirFacture")]
     public partial class SaisirFacture : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,7 +98,7 @@ using Microsoft.Extensions.Logging;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
+#line 31 "/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/Pages/SaisirFacture.razor"
        
     private bool disabled;
     private string message;

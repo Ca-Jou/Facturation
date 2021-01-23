@@ -19,6 +19,7 @@ else
                 <th>Date d'echeance</th>
                 <th>Montant du</th>
                 <th>Montant regle</th>
+                <th>Paiement</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,7 @@ else
                     <td>@facture.DateEcheance.Date</td>
                     <td>@facture.MontantDu</td>
                     <td>@facture.MontantRegle</td>
+                    <td><a href="/SaisirPaiement/@facture.Numero">Enregistrer un paiement</a></td>
                 </tr>
             }
         </tbody>

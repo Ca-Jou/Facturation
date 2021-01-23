@@ -1920,3 +1920,5 @@
 /home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/obj/Debug/net5.0/service-worker-assets.js
 /home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/obj/Debug/net5.0/RazorDeclaration/Pages/SaisirFacture.razor.g.cs
 /home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/obj/Debug/net5.0/Razor/Pages/SaisirFacture.razor.g.cs
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/obj/Debug/net5.0/RazorDeclaration/Pages/SaisirPaiement.razor.g.cs
+/home/camille/Documents/Formation/2-EPSI/Environnement .NET/Facturation/Client/obj/Debug/net5.0/Razor/Pages/SaisirPaiement.razor.g.cs

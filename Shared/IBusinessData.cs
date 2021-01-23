@@ -11,5 +11,7 @@ namespace Facturation.Shared
         decimal TresoEnAttente { get; }
 
         public void AddFacture(Facture facture);
+
+        public void UpdateFacture(Facture facture);
     }
 }

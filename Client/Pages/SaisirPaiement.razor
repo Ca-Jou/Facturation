@@ -1,0 +1,89 @@
+@page "/SaisirPaiement/{numFacture}"
+@using Facturation.Shared
+@inject HttpClient HttpClient
+
+<h1>Enregistrer un paiement</h1>
+
+@if (facture == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div>
+        <p>Client : @facture.Client</p>
+        <p>Date d'emission : @facture.DateEmission</p>
+        <p>Date d'echeance : @facture.DateEcheance</p>
+        <p>Montant HT facture : @facture.MontantDu €HT</p>
+        <p>Montant HT deja regle : @facture.MontantRegle €HT</p>
+        <p>Reste a percevoir : @resteDu €HT</p>
+    </div>
+
+    
+    <EditForm class="form" name="payForm" Model="@paiement" OnValidSubmit="@postPaiement">
+        <ValidationSummary />
+        <DataAnnotationsValidator />
+        
+        <label for="montant">Montant paye HT : </label>
+        <InputNumber id="montant" @bind-Value="paiement.Montant" disabled="@disabled"></InputNumber>
+
+        <label for="date">Date de paiement : </label>
+        <InputDate id="date" @bind-Value="paiement.Date" disabled="@disabled"></InputDate>
+
+        <button type="submit" disabled="@disabled">Enregistrer</button>
+
+        <p style="@messageStyles">@message</p>
+    </EditForm>
+}
+
+
+@code {
+    [Parameter]
+    public string numFacture { get; set; }
+    
+    private Paiement paiement = new Paiement() {Date = DateTime.Today};
+    private Facture facture;
+    private decimal resteDu;
+    private bool disabled;
+    private string message;
+    private string messageStyles;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        facture = await HttpClient.GetFromJsonAsync<Facture>("api/factures/" + numFacture);
+        paiement.Facture = facture;
+        resteDu = facture.MontantDu - facture.MontantRegle;
+    }
+
+    protected async void postPaiement()
+    {
+        try
+        {
+            var response = await HttpClient.PostAsJsonAsync("api/paiements", paiement);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new HttpRequestException("Validation failed.");
+            }
+            else
+            {
+                disabled = true;
+                messageStyles = "color:green";
+                message = "Le paiement a bien ete enregistree.";
+            }
+        }
+        catch (ArgumentOutOfRangeException e)
+        {
+            messageStyles = "color:red";
+            message = $"Erreur d'enregistrement du paiement: {e.Message}";
+        }
+        catch (Exception e)
+        {
+            messageStyles = "color:red";
+            message = $"Erreur d'enregistrement du paiement: {e.Message}";
+        }
+        
+        StateHasChanged();
+    }
+}

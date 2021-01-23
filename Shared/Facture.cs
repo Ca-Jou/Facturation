@@ -41,20 +41,20 @@ namespace Facturation.Shared
             return DateEcheance < DateTime.Now;
         }
 
-        public void enregistrerPaiement(DateTime datePaiement, decimal montant)
+        public void enregistrerPaiement(Paiement paiement)
         {
-            if (datePaiement < DateEmission)
+            if (paiement.Date < DateEmission)
             {
                 throw new ArgumentOutOfRangeException(
                     "Impossible d'enregistrer un paiement anterieur a la date d'emission de la facture.");
             }
-
-            if (MontantDu - MontantRegle < montant)
+            
+            if (MontantDu - MontantRegle < paiement.Montant)
             {
                 throw new ArgumentOutOfRangeException("Impossible de payer plus que le montant facture.");
             }
 
-            MontantRegle += montant;
+            MontantRegle += paiement.Montant;
         }
         
         
@@ -90,6 +90,7 @@ namespace Facturation.Shared
         }
 
         [Required(ErrorMessage = "Le montant facture est obligatoire.")]
+        [DataType(DataType.Currency)]
         public decimal MontantDu
         {
             get => _montantDu;
